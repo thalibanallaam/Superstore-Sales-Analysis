@@ -1,0 +1,249 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "superstore-sales",
+      "data_connector_name": "fluent",
+      "datasource_name": "P2M3_ThalibanAllaam_data_clean"
+    },
+    "batch_markers": {
+      "ge_load_time": "20250414T152802.400508Z",
+      "pandas_data_fingerprint": "ae027e9f8d5dc2b8c52d3c0f4db4104a"
+    },
+    "batch_spec": {
+      "reader_method": "read_csv",
+      "reader_options": {
+        "filepath_or_buffer": "compose_file\\data\\P2M3_ThalibanAllaam_data_clean.csv"
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "checkpoint_1",
+    "expectation_suite_name": "expectation-superstore-dataset",
+    "great_expectations_version": "0.18.19",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2025-04-14T22:28:02.376986+07:00"
+    },
+    "validation_id": null,
+    "validation_time": "20250414T152802.467149Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "row_id"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 9789,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "sales",
+          "max_value": 100000,
+          "min_value": 0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 9789,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "sales",
+          "type_list": [
+            "integer",
+            "float"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "sales"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 9789,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "customer_id"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_distinct_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "ship_mode",
+          "value_set": [
+            "Second Class",
+            "Standard Class",
+            "First Class",
+            "Same Day"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "value_counts": [
+            {
+              "count": 1501,
+              "value": "First Class"
+            },
+            {
+              "count": 538,
+              "value": "Same Day"
+            },
+            {
+              "count": 1901,
+              "value": "Second Class"
+            },
+            {
+              "count": 5849,
+              "value": "Standard Class"
+            }
+          ]
+        },
+        "observed_value": [
+          "First Class",
+          "Same Day",
+          "Second Class",
+          "Standard Class"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "P2M3_ThalibanAllaam_data_clean-superstore-sales",
+          "column": "order_id",
+          "max_value": 15,
+          "min_value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 9789,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 7,
+    "success_percent": 100.0,
+    "successful_expectations": 7,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
