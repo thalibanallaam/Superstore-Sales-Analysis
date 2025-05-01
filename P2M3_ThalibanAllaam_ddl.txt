@@ -1,0 +1,50 @@
+Dataset URL: https://www.kaggle.com/datasets/bhanupratapbiswas/superstore-sales
+
+DDL Syntax
+- Copy the dataset csv file to PostgreSQL
+docker cp P2M3_ThalibanAllaam_data_raw.csv postgres:/P2M3_ThalibanAllaam_data_raw.csv
+
+- Access the container
+docker exec -it postgres bash
+
+- Access PostgreSQL
+psql -U postgres
+
+- Create new database for the project
+CREATE DATABASE m3db;
+- Access database
+\c m3db
+
+- Create a new table
+CREATE TABLE table_m3 (
+    Row_ID INT,
+    Order_ID TEXT,
+    Order_Date DATE,
+    Ship_Date DATE,
+    Ship_Mode TEXT,
+    Customer_ID TEXT,
+    Customer_Name TEXT,
+    Segment TEXT,
+    Country TEXT,
+    City TEXT,
+    State TEXT,
+    Postal_Code FLOAT,
+    Region TEXT,
+    Product_ID TEXT,
+    Category TEXT,
+    Sub_Category TEXT,
+    Product_Name TEXT,
+    Sales FLOAT
+);
+
+- Adjust date format
+SET datestyle = 'ISO, DMY';
+
+DML Syntax
+- Import data from csv file to table_m3
+COPY table_m3
+FROM '/P2M3_ThalibanAllaam_data_raw.csv'
+DELIMITER ',' CSV HEADER ENCODING 'LATIN1';
+
+- Preview the table
+SELECT * FROM table_m3 LIMIT 10;
