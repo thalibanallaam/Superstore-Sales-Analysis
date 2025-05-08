@@ -1,6 +1,6 @@
 # Superstore Sales Analysis
 
-This project analyze Superstore sales data while also simulating the ETL process.
+The Superstore Sales Analysis project is a comprehensive data analytics initiative that simulates an end-to-end ETL (Extract, Transform, Load) pipeline for retail sales data. The project focuses on ingesting, cleaning, and analyzing sales data from a fictional superstore, leveraging modern data engineering tools such as Docker, PostgreSQL, and Apache Airflow.
 
 ## Repository Outline
 ```
